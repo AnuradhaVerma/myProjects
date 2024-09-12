@@ -6,8 +6,6 @@ let humidEle = document.querySelector(".hum");
 let weatherC =document.querySelector(".weatherCondition");
 let sunriseT = document.querySelector(".sunrise");
 let sunsetT = document.querySelector(".sunset");
-
-
 let input = document.querySelector(".cityInput");
 let btn = document.querySelector("#search-addon");
 
@@ -44,9 +42,10 @@ function setWeatherBackground(weatherCondition) {
     thunderstorm: 'assets/thunderstorm.jpg',
     drizzle: 'assets/drizzle.jpg',
     mist: 'assets/mist.jpg',
+    default: 'assets/default.jpg'
   };
 
-  const imagePath = weatherImages[weatherCondition] || 'url("assets/default.jpg")';
+  const imagePath = weatherImages[weatherCondition];
   //Apply the background image and styles to the body
   if (imagePath) {
     document.body.style.backgroundImage = `url(${imagePath})`;
