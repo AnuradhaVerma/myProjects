@@ -46,7 +46,7 @@ function setWeatherBackground(weatherCondition) {
     mist: 'assets/mist.jpg',
   };
 
-  const imagePath = weatherImages[weatherCondition];
+  const imagePath = weatherImages[weatherCondition] || 'url("assets/default.jpg")';
   //Apply the background image and styles to the body
   if (imagePath) {
     document.body.style.backgroundImage = `url(${imagePath})`;
